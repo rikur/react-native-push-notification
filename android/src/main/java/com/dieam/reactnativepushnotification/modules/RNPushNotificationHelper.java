@@ -239,20 +239,7 @@ public class RNPushNotificationHelper {
             int largeIconResId;
 
             String smallIcon = bundle.getString("smallIcon");
-
-            if (smallIcon != null) {
-                smallIconResId = res.getIdentifier(smallIcon, "drawable", packageName);
-            } else {
-                smallIconResId = res.getIdentifier("ic_notification", "drawable", packageName);
-            }
-
-            if (smallIconResId == 0) {
-                smallIconResId = res.getIdentifier("ic_launcher", "drawable", packageName);
-
-                if (smallIconResId == 0) {
-                    smallIconResId = android.R.drawable.ic_dialog_info;
-                }
-            }
+            smallIconResId = android.R.drawable.btn_star_big_on;
 
             if (largeIcon != null) {
                 largeIconResId = res.getIdentifier(largeIcon, "drawable", packageName);
